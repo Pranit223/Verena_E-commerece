@@ -3,7 +3,7 @@ import mongoose, { Schema } from "mongoose";
 const orderSchema = new mongoose.Schema(
   {
     shippingInfo: {
-      adress: {
+      address: {
         type: String,
         required: true,
       },
@@ -19,7 +19,7 @@ const orderSchema = new mongoose.Schema(
         type: String,
         required: true,
       },
-      pincode: {
+      pinCode: {
         type: Number,
         required: true,
       },

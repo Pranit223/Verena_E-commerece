@@ -63,11 +63,11 @@ export type OrderItemType = {
 };
 
 export type shippingInfoType = {
-  adress: string;
+  address: string;
   city: string;
   state: string;
   country: string;
-  pincode: number;
+  pinCode: number;
 };
 
 export type NewOrderReqBody = {

@@ -24,7 +24,8 @@ export const NewOrder = async (
     if (!orderItems || !user || !subtotal || !tax || !shippingInfo || !total) {
       return next(new Error("Missing Fields"));
     }
-    await Order.create({
+  
+    const ans = await Order.create({
       shippingCharges,
       orderItems,
       user,
@@ -58,7 +59,7 @@ export const myOrders = async (
     let orders = [];
 
     orders = await Order.find({ user });
-// await invalidateCache({ product: true, order: true, admin: true });
+    // await invalidateCache({ product: true, order: true, admin: true });
     res.status(200).json({
       sucess: true,
       orders,
