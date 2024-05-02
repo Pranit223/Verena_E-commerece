@@ -5,7 +5,6 @@ import { reduceStock } from "../utils/features.js";
 import { invalidateCache } from "../utils/Revalidate.js";
 import { myCache } from "../app.js"
 
-//Order Controller for order management
 export const NewOrder = async (
   req: Request<Params, {}, NewOrderReqBody>,
   res: Response,
